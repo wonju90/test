@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <mata charset="uft-8"/>
+    <title>Map</title>
+</head>
+<body>
+    <h2>학동역 맛지도</h2>
+    <div id="map" style="width:800px;height:600px;"></div>
+    
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=5adf37c2485e74a1bf55db6f5f504020&libraries=services,clusterer,drawing"></script>
+    <script>
+        var container = document.getElementById('map');
+        var options = {
+            center: new kakao.maps.LatLng(37.514298092,127.031688100),
+            level: 4
+        };
+
+        var map = new kakao.maps.Map(container, options);
+
+        var markerPosition = new kakao.maps.LatLng(37.514298092,127.031688100)
+
+        var marker = new kakao.maps.Marker({
+            position: markerPosition
+        });
+
+        marker.setMap(map);
+    </script>
+</body>
+</html>
